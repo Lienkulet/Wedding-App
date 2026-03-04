@@ -1,0 +1,4 @@
+.card {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}

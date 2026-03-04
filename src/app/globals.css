@@ -1,6 +1,4 @@
 @import "@/styles/tokens.css";
-@import "@/styles/layout.css";
-@import "@/styles/components.css";
 @import "@/styles/animations.css";
 
 * {
@@ -16,8 +14,7 @@ body {
 }
 
 body {
-  background: radial-gradient(circle at 0% 10%, #f4ecdf 0, transparent 40%),
-    radial-gradient(circle at 95% 70%, #efe0d3 0, transparent 35%), var(--color-page-bg);
+  background-color: #FBF8F1;
   color: var(--color-text);
   font-family: var(--font-body), sans-serif;
   line-height: 1.5;

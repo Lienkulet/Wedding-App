@@ -1,20 +1,21 @@
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button/button";
 import { revealDelay } from "@/lib/reveal-style";
+import styles from "./rsvp-form.module.css";
 
 export function RSVPForm({ content, id }) {
   return (
-    <section className="contact-grid" id={id}>
-      <div className="contact-image" data-reveal>
+    <section className={styles.contact} id={id}>
+      <div className={styles.image} data-reveal>
         <Image alt="Wedding bouquet" fill sizes="(max-width: 1024px) 100vw, 40vw" src={content.image} />
       </div>
 
-      <div className="contact-copy" data-reveal style={revealDelay(90)}>
-        <p className="eyebrow">{content.eyebrow}</p>
+      <div className={styles.copy} data-reveal style={revealDelay(90)}>
+        <p className={styles.eyebrow}>{content.eyebrow}</p>
         <h2>{content.title}</h2>
 
-        <form className="rsvp-form" noValidate>
+        <form className={styles.form} noValidate>
           {content.fields.map((label, index) => {
             const inputId = `rsvp-field-${index}`;
 

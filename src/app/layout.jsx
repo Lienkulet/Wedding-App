@@ -1,6 +1,6 @@
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 
-import { AppShell } from "@/components/sections/app-shell";
+import { AppShell } from "@/components/sections/app-shell/app-shell";
 import { LanguageProvider } from "@/lib/language-context";
 import "@/app/globals.css";
 

@@ -1,9 +1,10 @@
 "use client";
 
-import { Footer } from "@/components/sections/footer";
-import { Navbar } from "@/components/sections/navbar";
-import { Container } from "@/components/ui/container";
+import { Footer } from "@/components/sections/footer/footer";
+import { Navbar } from "@/components/sections/navbar/navbar";
+import { Container } from "@/components/ui/container/container";
 import { useLanguage } from "@/lib/language-context";
+import styles from "./app-shell.module.css";
 
 export function AppShell({ children }) {
   const { content, language, languages, setLanguage } = useLanguage();
@@ -19,13 +20,12 @@ export function AppShell({ children }) {
         onLanguageChange={setLanguage}
       />
 
-      <main id="main-content">
-        <Container>{children}</Container>
+      <main className={styles.main} id="main-content">
+        {children}
       </main>
 
-      <Container>
-        <Footer content={content.footer} />
-      </Container>
+
+      <Footer content={content.footer} />
     </>
   );
 }
