@@ -1,0 +1,10 @@
+[data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+[data-reveal-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
