@@ -1,17 +1,6 @@
-.skipLink {
-  background: #fff;
-  border-radius: 8px;
-  color: #5c3f33;
-  left: 14px;
-  padding: 0.5rem 0.75rem;
-  position: fixed;
-  top: -50px;
-  transition: top 220ms ease;
-  z-index: 80;
-}
-
-.skipLink:focus-visible {
-  top: 14px;
+.logoBtn,
+.logoBtn:hover{
+  text-decoration: none !important;
 }
 
 .offset {
@@ -20,7 +9,7 @@
 
 .fixed {
   background: rgba(251, 248, 241, 0.96);
-  border-bottom: 1px solid rgba(203, 185, 171, 0.38);
+  /* border-bottom: 1px solid rgba(203, 185, 171, 0.38); */
   inset: 0 0 auto;
   position: fixed;
   transition: background-color 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
@@ -29,7 +18,7 @@
 
 .scrolled {
   background: #EAD9C9;
-  color: #5c3f33;
+  color: var(--color-text-beige);
   border-bottom-color: rgba(255, 255, 255, 0.22);
   box-shadow: 0 12px 26px rgba(96, 57, 35, 0.22);
 }
@@ -53,8 +42,9 @@
 }
 
 .links a {
-  color: var(--color-title);
-  font-size: 0.92rem;
+  color: var(--color-text-beige);
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: color 260ms ease, opacity 260ms ease;
@@ -73,18 +63,28 @@
 .trigger {
   align-items: center;
   background: transparent;
-  border: 1px solid #dec9ba;
+  border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  color: var(--color-text);
+  color: var(--color-text-beige);
   cursor: pointer;
   display: inline-flex;
-  font-size: 0.72rem;
-  gap: 8px;
-  letter-spacing: 0.08em;
-  min-width: 78px;
-  padding: 0.55rem 0.85rem;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  letter-spacing: 0.12em;
+  padding: 0.8rem 1.5rem;
   text-transform: uppercase;
   transition: all 260ms ease;
+}
+
+.triggerPrimary {
+  border-color: var(--color-text-beige);
+  color: var(--color-text-beige);
+}
+
+.triggerSecondary {
+  border-color: var(--color-text-grey);
+  color: var(--color-text-grey);
 }
 
 .caret {
@@ -127,7 +127,7 @@
   border-radius: 8px;
   color: #6b5f57;
   cursor: pointer;
-  font-size: 0.72rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
   padding: 0.46rem 0.5rem;
   text-align: left;
@@ -144,13 +144,8 @@
   color: #fff;
 }
 
-.scrolled .links a,
-.scrolled .trigger {
-  color: #fff;
-}
-
-.scrolled .trigger {
-  border-color: rgba(255, 255, 255, 0.66);
+.scrolled .links a {
+  color: var(--color-text-grey);
 }
 
 .scrolled :global(.ui-button) {

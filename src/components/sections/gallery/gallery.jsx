@@ -13,7 +13,7 @@ export function Gallery({ content, id }) {
           <p className={styles.eyebrow}>{content.eyebrow}</p>
           <h2>{content.title}</h2>
         </div>
-        <Button variant="muted">{content.cta}</Button>
+        <Button className="secondary">{content.cta}</Button>
       </div>
 
       <div className={styles.grid}>

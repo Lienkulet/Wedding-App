@@ -38,13 +38,13 @@ export function Navbar({ language, languages, logo, navItems, actionLabel, onLan
 
   return (
     <>
-      <Link className={styles.skipLink} href="#main-content">
+      {/* <Link className={styles.skipLink} href="#main-content">
         Skip to content
-      </Link>
+      </Link> */}
       <div aria-hidden="true" className={styles.offset} />
       <header className={cn(styles.fixed, isScrolled && styles.scrolled)}>
         <Container className={styles.shell}>
-          <Link aria-label="Go to homepage" href="#hero">
+          <Link aria-label="Go to homepage" href="#hero" className={styles.logoBtn}>
             <Image alt="Enchanted Weddings" className={styles.logo} height={82} src={logo} width={176} />
           </Link>
 
@@ -61,7 +61,7 @@ export function Navbar({ language, languages, logo, navItems, actionLabel, onLan
               <button
                 aria-expanded={isMenuOpen}
                 aria-haspopup="menu"
-                className={styles.trigger}
+                className={cn(styles.trigger, isScrolled ? styles.triggerSecondary : styles.triggerPrimary)}
                 onClick={() => setIsMenuOpen((value) => !value)}
                 type="button"
               >
@@ -91,7 +91,7 @@ export function Navbar({ language, languages, logo, navItems, actionLabel, onLan
               </ul>
             </div>
 
-            <Button>{actionLabel}</Button>
+            <Button className={isScrolled ? "primary" : "secondary"}>{actionLabel}</Button>
           </div>
         </Container>
       </header>

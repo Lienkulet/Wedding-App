@@ -1,30 +1,47 @@
-.button {
+.primary,
+.secondary {
   align-items: center;
   background: transparent;
   border: 1px solid var(--color-title);
   border-radius: var(--radius-pill);
-  color: var(--color-title);
+  color: var(--color-text-grey);
   cursor: pointer;
   display: inline-flex;
-  font-size: 0.82rem;
+  font-size: 1rem;
+  font-weight: 500;
   gap: 0.5rem;
   letter-spacing: 0.12em;
   padding: 0.8rem 1.5rem;
   text-transform: uppercase;
   transition: all 0.25s ease;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.button:hover {
-  background: var(--color-title);
+.secondary {
+  border: 1px solid var(--color-text-beige);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-beige);
+}
+
+.primary:hover {
+  background: var(--color-text-grey);
+  color: #fff;
+}
+
+.secondary:hover {
+  background: var(--color-text-beige);
   color: #fff;
 }
 
 .muted {
-  border-color: var(--color-text);
+  border-color: var(--color-text-beige);
   color: var(--color-text);
 }
 
 .muted:hover {
-  background: var(--color-text);
+  background: var(--color-text-beige);
   color: #fff;
 }
