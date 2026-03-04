@@ -20,6 +20,12 @@ export function Footer({ content }) {
 
 
         <div className={styles.rightBlock} data-reveal style={revealDelay(100)}>
+          <div className={styles.dots}>
+            <img src="/dots.svg" />
+          </div>
+          <div className={styles.dots2}>
+            <img src="/dots2.svg" />
+          </div>
           <div className={styles.meta}>
             <h3>Sitemap</h3>
             <nav aria-label="Footer sitemap">

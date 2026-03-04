@@ -4,7 +4,7 @@
   margin-top: 20px;
   padding: 100px 0;
   color: var(--color-text-grey);
-
+  margin-top: 172px;
 }
 
 .footer h2 {
@@ -36,10 +36,35 @@
 }
 
 .rightBlock{
+  position: relative;
   justify-content: space-between;
   max-width: 400px;
   width: 100%;
   align-self: stretch;
+}
+
+.dots{
+  position: absolute;
+  top: -100%;
+  right: -50%;
+  z-index: -1;
+}
+
+.dots2{
+  position: absolute;
+  top: -200%;
+  right: -70%;
+  z-index: -1;
+}
+
+.dots img{
+  height: 600px;
+  width: 600px;
+}
+
+.dots2 img{
+  width: 800px;
+  height: 800px;
 }
 
 .copyrightTerms{
