@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button/button";
 import { Card } from "@/components/ui/card/card";
@@ -24,7 +25,7 @@ export function BlogGrid({ content, id }) {
             </div>
             <p>{card.date}</p>
             <h3>{card.title}</h3>
-            <a href="#">{content.readMoreLabel}</a>
+            <Link href="#">{content.readMoreLabel}</Link>
           </Card>
         ))}
       </div>

@@ -133,9 +133,12 @@ export const WEDDING_CONTENT = {
     footer: {
       title: "Our wedding planners will leave you breathless on your special day.",
       sitemap: ["Home", "About", "Services", "Blog", "Contact Us"],
-      copyright: "Copyright Dotcreativemarket",
+      copyright: "Copyright Lienku",
       terms: "Terms of Use",
       privacy: "Privacy Policy",
+      newsletterLabel: "Newsletter",
+      newsletterPlaceholder: "enter you email address",
+      newsletterAction: "Subscribe",
     },
   },
   ro: {
@@ -239,9 +242,12 @@ export const WEDDING_CONTENT = {
     footer: {
       title: "Wedding plannerii noștri vă lasă fără cuvinte în ziua voastră specială.",
       sitemap: ["Acasă", "Despre", "Servicii", "Blog", "Contact"],
-      copyright: "Copyright Dotcreativemarket",
+      copyright: "Copyright Lienku",
       terms: "Termeni de utilizare",
       privacy: "Politica de confidențialitate",
+      newsletterLabel: "Newsletter",
+      newsletterPlaceholder: "introdu adresa de email",
+      newsletterAction: "Abonează-te",
     },
   },
   ru: {
@@ -345,9 +351,12 @@ export const WEDDING_CONTENT = {
     footer: {
       title: "Наши свадебные планеры сделают ваш особенный день незабываемым.",
       sitemap: ["Главная", "О нас", "Услуги", "Блог", "Контакты"],
-      copyright: "Copyright Dotcreativemarket",
+      copyright: "Copyright Lienku",
       terms: "Условия использования",
       privacy: "Политика конфиденциальности",
+      newsletterLabel: "Newsletter",
+      newsletterPlaceholder: "введите ваш email адрес",
+      newsletterAction: "Подписаться",
     },
   },
 };

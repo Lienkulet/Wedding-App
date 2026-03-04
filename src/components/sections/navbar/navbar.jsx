@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button/button";
@@ -37,21 +38,21 @@ export function Navbar({ language, languages, logo, navItems, actionLabel, onLan
 
   return (
     <>
-      <a className={styles.skipLink} href="#main-content">
+      <Link className={styles.skipLink} href="#main-content">
         Skip to content
-      </a>
+      </Link>
       <div aria-hidden="true" className={styles.offset} />
       <header className={cn(styles.fixed, isScrolled && styles.scrolled)}>
         <Container className={styles.shell}>
-          <a aria-label="Go to homepage" href="#hero">
+          <Link aria-label="Go to homepage" href="#hero">
             <Image alt="Enchanted Weddings" className={styles.logo} height={82} src={logo} width={176} />
-          </a>
+          </Link>
 
           <nav aria-label="Main navigation" className={styles.links}>
             {navItems.map((item, index) => (
-              <a href={`#${NAV_SECTION_IDS[index] ?? "hero"}`} key={item}>
+              <Link href={`#${NAV_SECTION_IDS[index] ?? "hero"}`} key={item}>
                 {item}
-              </a>
+              </Link>
             ))}
           </nav>
 

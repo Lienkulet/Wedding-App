@@ -2,39 +2,169 @@
   background-color: #EAD9C9;
   border-radius: 24px 24px 0 0;
   margin-top: 20px;
-  padding: 80px 48px 52px;
+  padding: 100px 0;
+  color: var(--color-text-grey);
+
 }
 
 .footer h2 {
-  color: #787878;
   font-family: var(--font-heading), serif;
-  font-size: clamp(2rem, 4.3vw, 4.3rem);
+  font-size: 50px;
   font-weight: 500;
-  line-height: 1.05;
+  line-height: 72.7px;
+  letter-spacing: -1%;
   text-transform: uppercase;
 }
 
-.footerBlock{
+.footerwrapper{
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 61px;
+}
+
+.rightBlock,
+.leftBlock{
+  display: flex;
+  flex-direction: column;
+}
+
+.leftBlock{
+  width: 100%;
+  max-width: 800px;
+  gap: 2.2rem;
+}
+
+.rightBlock{
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+  align-self: stretch;
+}
+
+.copyrightTerms{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .meta {
   align-items: start;
   display: flex;
-  justify-content: space-between;
-  margin-top: 2.25rem;
+  flex-direction: column;
 }
 
-.meta nav,
-.meta div {
+.meta nav{
   display: flex;
-  gap: 1rem;
+  gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
+.meta h3{
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+}
+
+.copyrightTerms a,
+.copyrightTerms p,
 .meta a,
 .meta p {
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-text-grey);
+  margin-top: 14px;
+}
+
+.srOnly {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.newsletterForm {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newsletterInput {
+  background: transparent;
+  border: 0;
+  color: var(--color-text-grey);
+  flex: 1;
+  font-family: var(--font-body), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  min-width: 0;
+  outline: none;
+  padding: 0;
+}
+
+.newsletterInput::placeholder {
+  color: var(--color-text-grey);
+}
+
+.newsletterButton {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--color-text-grey);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -1%;
+  line-height: 1;
+  gap: 5px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font-family: var(--font-body), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 72px 0 56px;
+  }
+
+  .footerwrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    max-width: none;
+    width: 100%;
+    align-self: auto;
+  }
+
+  .rightBlock {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 680px) {
@@ -49,5 +179,46 @@
   .footer {
     border-radius: 18px 18px 0 0;
     padding: 54px 20px 40px;
+  }
+
+  .footer h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .leftBlock {
+    gap: 1.4rem;
+  }
+
+  .copyrightTerms {
+    gap: 0.75rem 1.25rem;
+    justify-content: flex-start;
+  }
+
+  .meta h3 {
+    margin-bottom: 1rem;
+  }
+
+  /* .newsletterForm {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  } */
+
+  .newsletterInput {
+    font-size: 1rem;
+    line-height: 1.4;
+    width: 100%;
+  }
+
+  .newsletterButton {
+    align-self: flex-start;
+    font-size: 1rem;
+    gap: 6px;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+    transform: none;
   }
 }
